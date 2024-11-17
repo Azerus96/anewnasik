@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: ofc-pineapple-poker
+    env: python
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 10000
+    buildCommand: "" # or specify your build command if needed
+    plan: free # or choose a suitable plan
+    staticPublishPath: ./frontend/build # Path to your built frontend files
